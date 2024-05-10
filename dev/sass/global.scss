@@ -1,0 +1,25 @@
+body {
+    background-color: $bg-color;
+    font-size: $font-size;
+    font-family: $font-primary;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+a {}
+
+p {}
+
+.container {
+    max-width: 1140px;
+}
