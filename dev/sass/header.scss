@@ -4,6 +4,7 @@
     padding-top: 25px;
     padding-bottom: 39px;
     position: relative;
+
     .btn {
         padding: 13px 21px;
     }
@@ -20,9 +21,55 @@
     align-items: center;
     gap: 45px;
     padding: 4px 12px 0 12px;
- 
+
     a {
         color: $text-color;
         text-decoration: none;
     }
 }
+
+
+
+.btn-burger,
+.btn-burger:before,
+.btn-burger:after {
+    height: 2px;
+    width: 28px;
+}
+
+.btn-burger {
+    border: none;
+    position: relative;
+    padding: 0;
+    background-color: transparent;
+    height: 24px;
+    background-image: linear-gradient(#ffffff00 46%, #ffffff 46% 54%, #ffffff00 54%);
+     
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        transition: .3s;
+    }
+
+    &:after {
+        top: 22px;
+    }
+
+    &.active {
+        background-image: linear-gradient(#ffffff00 46%, #ff2ec000 46% 54%, #ffffff00 54%);
+
+        &:after {
+            top: 11px;
+            transform: rotate(45deg);
+        }
+        &:before {
+            top: 11px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+ 
