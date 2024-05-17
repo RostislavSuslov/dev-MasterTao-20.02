@@ -29,55 +29,7 @@
 }
 
 
-
-.btn-burger div,
-.btn-burger:before,
-.btn-burger:after {
-    height: 2px;
-    width: 28px;
-}
-
-.btn-burger {
-    height: 24px;
-    width: 28px;
+.hamburger {
     padding: 0;
-    border: none;
-    position: relative;
-    background-color: transparent;
-
-    div,
-    &:before,
-    &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #fff;
-        transition: .3s;
-    }
-
-    &:after {
-        top: 22px;
-    }
-
-    div {
-        top: 11px;
-    }
-
-    &.active {
-        &:after {
-            top: 11px;
-            transform: rotate(45deg);
-        }
-
-        &:before,
-        div {
-            top: 11px;
-            transform: rotate(-45deg);
-        }
-        div {
-            background-color: transparent;
-        }
-    }
-
+    margin: 6px 0 0 0;
 }
