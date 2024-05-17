@@ -30,7 +30,7 @@
 
 
 
-.btn-burger,
+.btn-burger div,
 .btn-burger:before,
 .btn-burger:after {
     height: 2px;
@@ -38,13 +38,14 @@
 }
 
 .btn-burger {
+    height: 24px;
+    width: 28px;
+    padding: 0;
     border: none;
     position: relative;
-    padding: 0;
     background-color: transparent;
-    height: 24px;
-    background-image: linear-gradient(#ffffff00 46%, #ffffff 46% 54%, #ffffff00 54%);
-     
+
+    div,
     &:before,
     &:after {
         content: "";
@@ -59,17 +60,24 @@
         top: 22px;
     }
 
-    &.active {
-        background-image: linear-gradient(#ffffff00 46%, #ff2ec000 46% 54%, #ffffff00 54%);
+    div {
+        top: 11px;
+    }
 
+    &.active {
         &:after {
             top: 11px;
             transform: rotate(45deg);
         }
-        &:before {
+
+        &:before,
+        div {
             top: 11px;
             transform: rotate(-45deg);
         }
+        div {
+            background-color: transparent;
+        }
     }
+
 }
- 
