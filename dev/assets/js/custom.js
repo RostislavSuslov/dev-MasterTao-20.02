@@ -10,7 +10,8 @@ function showBurgerMenu() {
 burger.addEventListener('click', showBurgerMenu)
 
 
-const swiper = new Swiper('.swiper', {  
+const swiper = new Swiper('.slider-info', {  
+    spaceBetween: 40,
     loop: true,
     pagination: {
       el: '.swiper-pagination',
@@ -20,17 +21,11 @@ const swiper = new Swiper('.swiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    autoplay: {
-        delay: 1000,
-      },
+    // autoplay: {
+    //     delay: 5000,
+    //   },
 });
 
-$(document).ready(function(){
-    $('.your-class').slick({
-        dots: true,
-        infinite: false,
-        pauseOnHover: true,
-        autoplay: true,
-        autoplaySpeed: 1000,
-    });
-});
+// $(document).ready(function(){
+ 
+// });
