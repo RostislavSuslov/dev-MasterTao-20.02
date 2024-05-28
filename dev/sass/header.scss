@@ -1,3 +1,8 @@
+header {
+    position: relative;
+    background-color: $bg-primary
+}
+
 .header-nav {
     @extend .container;
     display: flex;
