@@ -155,6 +155,7 @@ ul {
         align-items: center;
         cursor: pointer;
         position: relative;
+
         &:before {
             content: "";
             display: block;
@@ -186,7 +187,7 @@ ul {
                 color: #282B38;
                 text-align: center;
             }
-            
+
             &:after {
                 content: "";
                 font-size: 40px;
@@ -217,7 +218,7 @@ ul {
     border-radius: 10px;
     padding: 7px 20px;
     @include fieldState;
-  
+
     .list {
         width: 100%;
     }
@@ -375,7 +376,6 @@ ul {
 /* IE */
 
 .scroll {
-
     scrollbar-face-color: $color-primary;
     scrollbar-shadow-color: #fff;
     scrollbar-highlight-color: #fff;
@@ -397,68 +397,6 @@ ul {
 
 
 
-
-
-
-
-.slick-track {
-    display: flex;
-}
-
-.slick-arrow {
-    font-size: 0;
-    width: 92px;
-    height: 92px;
-    border: none;
-    background: center no-repeat transparent;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='42' viewBox='0 0 24 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.40237 41.2538C3.1171 41.5391 2.76051 41.6817 2.36827 41.6817C1.97602 41.6817 1.61943 41.5391 1.33416 41.2538C0.763614 40.6833 0.763614 39.7561 1.33416 39.1856L19.5202 20.9996L1.33416 2.81351C0.763614 2.24296 0.763614 1.31583 1.33416 0.74529C1.9047 0.174747 2.83183 0.174747 3.40237 0.74529L22.6225 19.9654C23.1931 20.536 23.1931 21.4631 22.6225 22.0337L3.40237 41.2538Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
-
-    &:hover {
-        background-image: url("data:image/svg+xml,%3Csvg width='24' height='42' viewBox='0 0 24 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.40237 41.2538C3.1171 41.5391 2.76051 41.6817 2.36827 41.6817C1.97602 41.6817 1.61943 41.5391 1.33416 41.2538C0.763614 40.6833 0.763614 39.7561 1.33416 39.1856L19.5202 20.9996L1.33416 2.81351C0.763614 2.24296 0.763614 1.31583 1.33416 0.74529C1.9047 0.174747 2.83183 0.174747 3.40237 0.74529L22.6225 19.9654C23.1931 20.536 23.1931 21.4631 22.6225 22.0337L3.40237 41.2538V41.2538Z' fill='%2389C249'/%3E%3C/svg%3E%0A");
-    }
-
-    &.slick-prev {
-        transform: rotate(180deg);
-    }
-}
-
-.slick-dots {
-    display: flex;
-    justify-content: center;
-}
-
-ul.slick-dots {
-    padding: 0;
-    margin: 0;
-
-    >li {
-        margin: 0 13px;
-        height: 8px;
-        font-size: 0;
-
-        &:before {
-            display: none;
-        }
-
-        &.slick-active {
-            button {
-                background-color: #fff;
-            }
-        }
-    }
-
-    button {
-        font-size: 0;
-        padding: 0px;
-        border-radius: 50%;
-        opacity: 0.9;
-        border: 2px solid #FFFFFF;
-        width: 8px;
-        height: 8px;
-        background: transparent;
-        outline: none;
-    }
-}
 .page-home {
     section {
         margin-top: 0;
@@ -466,11 +404,11 @@ ul.slick-dots {
         margin-right: auto;
         margin-bottom: $section-margin-lg;
         max-width: 1920px;
-    
+
         &.container-fluid {
             padding: 90px 85px 100px;
             position: relative;
-    
+
             &:before {
                 content: "";
                 border-radius: 20px;
@@ -482,74 +420,97 @@ ul.slick-dots {
                 background-color: $bg-secondary;
             }
         }
-    
-        &:nth-child(odd) {
-            .template-title {
-                &:after {
-                    background-color: $color-primary;
-                }
+    }
+}
+
+section {
+    padding: 90px 0 100px;
+    margin-bottom: $section-margin-lg;
+
+    &.accent {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            max-width: 1820px;
+            width: calc(100% - 30px);
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            border-radius: 20px;
+            background-color: $bg-secondary;
+        }
+    }
+
+    &:nth-child(odd) {
+        .template-title,
+        .template-title h2 {
+            &::after {
+                background-color: orange;
             }
         }
     }
-    
 }
 
+
+
+
 .template-title {
+    padding-bottom: 60px;
+    margin-bottom: 0;
     text-align: center;
-    padding-bottom: 18px;
-    margin-bottom: 50px;
     position: relative;
 
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background-color: $color-secondary;
+        left: 50%;
+        bottom: 35px;
+        transform: translate(-50%, 0);
+    }
+
     h2 {
-        line-height: 124.5%;
+        font-size: 36px;
         text-transform: uppercase;
-        margin-bottom: 6px;
     }
 
     h3 {
-        font-weight: 300;
         font-size: 24px;
-        line-height: 1.25;
+        font-weight: 300;
     }
 
-    &:after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: calc(100% - 2px);
-        transform: translate(-50%, 0);
-        width: 85px;
-        height: 2px;
-        background-color: $color-secondary;
+    &.text-start {
+        &:after {
+            left: 0;
+            transform: none;
+        }
     }
 
-
-    /*type 2*/
-    &.col-lg-7 {
-        margin-bottom: 35px;
+    &.half-section {
+        max-width: 600px;
+        width: 100%;
         text-align: left;
 
-        h2 {
-            &:after {
-                content: "";
-                width: 85px;
-                height: 2px;
-                background-color: $color-secondary;
-                display: inline-block;
-                margin: 10px 20px;
-            }
+        &::after {
+            display: none;
         }
 
-        &.template-title {
-            &:after {
-                display: none;
-            }
+        h2:after {
+            content: "";
+            display: inline-block;
+            width: 100px;
+            height: 2px;
+            background-color: #89C249;
+            margin: 8px 20px;
         }
     }
 }
-
-
-
 
 .input-box {
 
@@ -590,10 +551,6 @@ ul.slick-dots {
 
 
 
- 
-.has-bg {
-    @include default-bg-lg;
-}
 
 
 body.overflow-hidden {
@@ -604,7 +561,7 @@ body.overflow-hidden {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #0000008c; 
+        background-color: #0000008c;
         backdrop-filter: blur(4px);
     }
 }

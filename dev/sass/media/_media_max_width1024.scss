@@ -1,4 +1,13 @@
 @media screen and (max-width: 1024px) {
+    section {
+        &.accent {
+            &:before {
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+    }
+
     .container {
         padding-right: 20px;
         padding-left: 20px;
@@ -57,6 +66,7 @@
             border-radius: 0;
             padding: 68px 20px 0;
             background-position: center;
+
             &:before {
                 content: "";
                 position: absolute;
