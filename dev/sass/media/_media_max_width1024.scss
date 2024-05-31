@@ -1,5 +1,7 @@
 @media screen and (max-width: 1024px) {
     section {
+        padding: 55px 0 60px;
+
         &.accent {
             &:before {
                 width: 100%;
@@ -97,6 +99,25 @@
             font-size: 16px;
             max-width: 275px;
             margin-bottom: 20px;
+        }
+    }
+
+    .template-title {
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        &:after {
+            bottom: 42px;
+        }
+
+        &.half-section {
+            margin: 0 auto;
+            text-align: center;
         }
     }
 }

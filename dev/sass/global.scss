@@ -446,6 +446,7 @@ section {
     }
 
     &:nth-child(odd) {
+
         .template-title,
         .template-title h2 {
             &::after {
@@ -467,29 +468,24 @@ section {
     &::after {
         content: "";
         position: absolute;
-        width: 100px;
+        width: 84px;
         height: 2px;
         background-color: $color-secondary;
         left: 50%;
-        bottom: 35px;
+        bottom: 47px;
         transform: translate(-50%, 0);
     }
 
     h2 {
         font-size: 36px;
         text-transform: uppercase;
+        margin-bottom: 6px;
     }
 
     h3 {
         font-size: 24px;
         font-weight: 300;
-    }
-
-    &.text-start {
-        &:after {
-            left: 0;
-            transform: none;
-        }
+        
     }
 
     &.half-section {
@@ -497,13 +493,8 @@ section {
         width: 100%;
         text-align: left;
 
-        &::after {
-            display: none;
-        }
-
         h2:after {
-            content: "";
-            display: inline-block;
+           
             width: 100px;
             height: 2px;
             background-color: #89C249;
