@@ -36,6 +36,16 @@ const swiper = new Swiper('.slider-info', {
     }
 });
 
+
+const fileInput = document.querySelector('#calculation-file');
+const fileName = document.querySelector('#file-name')
+
+fileInput.addEventListener('change', function() {
+  
+   fileName.innerHTML = fileInput.files[0].name;
+});
+
+
 // $(document).ready(function(){
  
 // });
