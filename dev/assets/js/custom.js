@@ -37,15 +37,37 @@ const swiper = new Swiper('.slider-info', {
 });
 
 
-const fileInput = document.querySelector('#calculation-file');
-const fileName = document.querySelector('#file-name')
+const fileLable = document.querySelectorAll('.calculation-label');
+const fileInput = document.querySelectorAll('.calculation-file');
 
-fileInput.addEventListener('change', function() {
-  
-   fileName.innerHTML = fileInput.files[0].name;
-});
+fileInput.forEach(item => {
+  item.addEventListener('change', function() {
+    let fileName = item.closest('.input-box').querySelector('.file-name')
+    fileName.innerHTML  = item.files[0].name;
+  })
+})
+
+fileLable.forEach(item => item.closest('.form-row').previousElementSibling.classList.add('special-gap') )
+ 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 // $(document).ready(function(){
  
 // });

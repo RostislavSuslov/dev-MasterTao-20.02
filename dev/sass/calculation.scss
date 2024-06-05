@@ -1,6 +1,6 @@
 .calculation-form {
     max-width: 626px;
-    padding: 50px 50px 61px;
+    padding: 47px 50px 61px;
     background-color: $bg-secondary;
     border-radius: 20px;
 }
@@ -15,11 +15,11 @@
 }
 
 .input-box {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 }
 
 .variation-box {
-    padding-top: 19px;
+    padding-top: 23px;
 }
 
 .control-box {
@@ -30,15 +30,25 @@
     display: none;
 }
 
-.calculation-file {
+.input-box .calculation-label {
     border: 2px dashed #ffffff42;
-    padding: 12px 24px;
+    padding: 10px 24px;
     width: 100%;
     border-radius: 10px;
     text-align: center;
     transition: .3s;
+    margin-bottom: 10px;
     &:hover {
         color: $color-secondary;
         border: 2px dashed $color-secondary;
     }
+}
+
+.file-name {
+    font-size: 15px;
+    margin: 0 0 9px 0;
+}
+
+.special-gap {
+   margin-bottom: 17px;
 }
