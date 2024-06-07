@@ -1,16 +1,16 @@
 @media (min-width: 1025px) {
-    .template-title{
+    .template-title {
 
         &.half-section {
             &:after {
                 display: none;
             }
-    
+
             h2:after {
                 content: "";
                 display: inline-block;
             }
-        } 
+        }
     }
 
     .template-title {
@@ -19,6 +19,18 @@
                 left: 0;
                 transform: none;
             }
+        }
+    }
+
+    .slider-advantages {
+        .swiper-wrapper {
+            flex-wrap: wrap;
+            gap: 26px 0;
+        }
+
+        .swiper-slide {
+            max-width: 25%;
+
         }
     }
 }

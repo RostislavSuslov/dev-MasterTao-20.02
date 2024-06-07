@@ -430,7 +430,7 @@ ul {
 
 section {
     padding: 90px 0 100px;
-    margin-bottom: $section-margin-lg;
+   // margin-bottom: $section-margin-lg;
 
     &.accent {
         position: relative;
@@ -562,4 +562,9 @@ body.overflow-hidden {
         background-color: #0000008c;
         backdrop-filter: blur(4px);
     }
+}
+
+.swiper-initialized {
+    overflow: hidden;
+    position: relative;
 }

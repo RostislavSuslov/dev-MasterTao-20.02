@@ -5,8 +5,7 @@
 
 .slider-info {
     @extend .container-xxl;
-    overflow: hidden;
-    position: relative;
+
 
     .swiper-slide {
         display: flex;
