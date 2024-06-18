@@ -568,3 +568,11 @@ body.overflow-hidden {
     overflow: hidden;
     position: relative;
 }
+
+
+.swiper-pagination {
+    font-size: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+}

@@ -3,6 +3,14 @@ header {
     background-color: $bg-primary
 }
 
+.logo {
+     
+    img {
+        max-width: 172px;
+        height: 49px;
+    }
+}
+
 .header-nav {
     @extend .container;
     display: flex;

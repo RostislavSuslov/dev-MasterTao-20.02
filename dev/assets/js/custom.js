@@ -52,67 +52,45 @@ fileLable.forEach(item => item.closest('.form-row').previousElementSibling.class
 
 
 /*swiperAdvantages*/
-// let swiperAdvantages  
+const advantagesCount = document.querySelectorAll('.slider-advantages .swiper-slide').length
 
-// function initAdvantages() {
-//     swiperAdvantages = new Swiper('.slider-advantages', {
-//     spaceBetween: 12,
-//     loop: true,
+console.log(advantagesCount);
 
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//         enabled: true,
-//     },
-//     breakpoints: {
-//         1025: {
-//             spaceBetween: 40,
-//             navigation: {
-//                 enabled: true,
-//                 nextEl: '.swiper-button-next',
-//                 prevEl: '.swiper-button-prev',
-//             },
-//             pagination: {
-//                 enabled: false,
-//             },
+const swiperAdvantages = new Swiper('.slider-advantages', {  
+    spaceBetween: 12,
+    loop: true,
+    simulateTouch: true,
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        enabled: true,
+    },
+    breakpoints: {
+      1025: {
+        spaceBetween: 0,
+        initialSlide: 0,
+        loop: false,
+        slidesPerGroup: advantagesCount,
+        simulateTouch: false,
+        pagination: {
+            enabled: false,
+            el: '.swiper-pagination',
+        },
+      }
+    }
+  });
 
-//         }
-//     }
-//   });
-// }
-
-// function destroyAdvantages() {
-//   swiperAdvantages.destroy( true, true )   
-// }
-
-
-// function mediaQuery(matchMedia1024) {
-//     if (matchMedia1024.matches) { // If media query matches
-//       initAdvantages()
-//     } else {
-//       destroyAdvantages()
-//     }
-// }
-
-// // Create a MediaQueryList object
-// const matchMedia1024 = window.matchMedia("(max-width: 1024px)")
-
-// // Call listener function at run time
-// mediaQuery(matchMedia1024);
-
-// // Attach listener function on state changes
-// matchMedia1024.addEventListener("change", function() {
-//     mediaQuery(matchMedia1024);
-// });
-/**/
 
 const swiperTemplate = new Swiper('.swiper-template', {
     speed: 700,
     loop: true,
     slidesPerView: 1,
+    spaceBetween: 15,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        enabled: true,
     },
 
     navigation: {
@@ -121,8 +99,8 @@ const swiperTemplate = new Swiper('.swiper-template', {
 
     breakpoints: {
         1025: {
-            slidesPerView: 3,
-            spaceBetween: 20,
+            slidesPerView: 2,
+            spaceBetween: 0,
             navigation: {
                 enabled: true,
                 nextEl: '.swiper-button-next',
@@ -131,18 +109,22 @@ const swiperTemplate = new Swiper('.swiper-template', {
             pagination: {
                 enabled: false,
             },
-        }
+        },
+        1400: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            navigation: {
+                enabled: true,
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                enabled: false,
+            },
+        },
+       
     }
 });
 
 
 
-
-
-
-
-
-
-// $(document).ready(function(){
-
-// });
